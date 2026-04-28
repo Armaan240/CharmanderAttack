@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    overflow: hidden;
+
+}
+
+#swap{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    padding: auto;
+    font-size: 12 px;
+    background-color: yellowgreen;
+}
