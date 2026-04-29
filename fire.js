@@ -14,7 +14,7 @@ let mainmodel;
 
 const loader = new ThreeMFLoader();
 loader.load(
-    'model/Charmander.3mf',function(object){ 
+    '/model/Charmander.3mf',function(object){ 
      object.rotation.set(-Math.PI / 2,0,0);
        object.scale.set(2, 2, 2);
      scene.add(object);
@@ -24,7 +24,7 @@ loader.load(
 );
 
 const Pball = new THREE.SphereGeometry(8,64,64);
-const p = new THREE.TextureLoader().load('model/ball.png');
+const p = new THREE.TextureLoader().load('/model/ball.png');
 const pmaterial = new THREE.MeshBasicMaterial({map: p});
 const ball = new THREE.Mesh(Pball, pmaterial);
 ball.rotation.set(-6,4.5,0);
@@ -110,7 +110,7 @@ document.getElementById("swap").addEventListener("click",()=>{
         document.getElementById("swap").textContent = "Ball Activated :P";
     }
     loader.load(
-    'model/c2.3mf',function(newmodel){ 
+    '/model/c2.3mf',function(newmodel){ 
      newmodel.rotation.set(-Math.PI / 2,0,0);
      scene.add(newmodel);
      mainmodel = newmodel;
